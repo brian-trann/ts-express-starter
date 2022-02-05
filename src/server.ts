@@ -1,14 +1,14 @@
 import createApp from './app';
 import { createAppConfig } from './config';
-
+import { config } from './config/config';
 /**
  * Start Express Server
  */
 
 const runServer = async () => {
     const app = await createApp();
-    const { config, valid } = await createAppConfig();
-    
+    const appConfig = await createAppConfig(config);
+    const { valid } = appConfig;
     app.listen(config.PORT, () => {
         if (valid.error) {
             console.error('\x1b[31m%s\x1b[0m', '\nMissing Secrets:', valid.missingSecrets, '\n');

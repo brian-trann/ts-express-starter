@@ -1,4 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express';
+import morgan from 'morgan';
 import { NotFound } from 'http-errors';
 import { AppError } from './types';
 import { usersRouter } from './modules';
@@ -8,6 +9,7 @@ const createApp = async () => {
     /**
      * Middleware
      */
+    app.use(morgan('tiny'));
     app.use(express.json());
 
     /**

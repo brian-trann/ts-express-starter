@@ -6,18 +6,18 @@ import { Secrets } from '../types';
 const createClients = async (config: Secrets) => {
     const clients = {
         axios: createAxiosClient(),
-        elastic: createElasticClient({
-            node: '',
-            auth: {
-                username: '',
-                password: '',
-            },
-        }),
-        kafka: {
-            consumer: await createKafkaClient({ clientId: '', brokers: [''] }).createKafkaConsumer(),
-            producer: await createKafkaClient({ clientId: '', brokers: [''] }).createKafkaProducer(),
-        },
-        pg: createPostgresClient({ connectionString: config.PG_DATABASE_URI }),
+        // elastic: createElasticClient({
+        //     node: '',
+        //     auth: {
+        //         username: '',
+        //         password: '',
+        //     },
+        // }),
+        // kafka: {
+        //     consumer: await createKafkaClient({ clientId: '', brokers: [''] }).createKafkaConsumer(),
+        //     producer: await createKafkaClient({ clientId: '', brokers: [''] }).createKafkaProducer(),
+        // },
+        // pg: createPostgresClient({ connectionString: config.PG_DATABASE_URI }),
     };
 
     return clients;

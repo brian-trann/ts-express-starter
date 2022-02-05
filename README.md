@@ -1,7 +1,5 @@
 # ts-express-starter
-TODO: 
 
-- [ ] make repo
 ## File Naming
 Please use `kebab-case`
 ## Scripts
