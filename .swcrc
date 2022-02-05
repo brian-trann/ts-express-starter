@@ -1,0 +1,14 @@
+{
+    "jsc": {
+      "parser": {
+        "syntax": "typescript",
+        "decorators": true,
+        "dynamicImport": false
+      },
+      "target": "es2017"
+    },
+    "module": {
+      "type": "commonjs",
+      "noInterop": false
+    }
+  }
